@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="lucky-item">
+    <view class="lucky-img">
+      <image src="{{image}}" mode="scaleToFill" ></image>
+    </view>
+    <view class="lucky-article">
+      <view class="lucky-title">
+        <span class="mylucky-title">{{name}}</span>
+        <span wx:if="{{xb==1}}" class="mylucky-sex"><image src="../../images/1.png" class="mylucky-sex" mode="scaleToFill" ></image></span>
+        <span wx:elif="{{xb==2}}" class="mylucky-sex"><image src="../../images/2.png" class="mylucky-sex" mode="scaleToFill" ></image></span>
+        <span wx:else="{{xb==0}}" class="mylucky-sex"><image src="../../images/0.png" class="mylucky-sex" mode="scaleToFill" ></image></span>
+      </view>
+    </view>
+  </view>
+
+  <view class="cash-form">
+    <form bindsubmit="formSubmit">
+      <view class="cash-row">
+        提现金额：
+        <input type="text" class="cash-input" name="re_money" value="{{balance}}"  />
+      </view>
+      <view class="cash-row">
+        姓名：
+        <input type="text" class="cash-input" name="name" value="" placeholder="输入支付宝姓名"  />
+      </view>
+      <view class="cash-row">
+        支付宝账号：
+        <input type="text" class="cash-input" name="pay_id" value="" placeholder="输入支付宝账号" />
+      </view>
+      <view class="cash-row">
+        微信号：
+        <input type="text" class="cash-input" name="wx_name" value="" placeholder="输入微信号" />
+      </view>
+      <view class="cash-row">
+        手机号：
+        <input type="text" class="cash-input" name="phone" value="" placeholder="输入您的手机号" />
+      </view>
+
+      <view class="btn-group">
+        <button class="btn btn-yellow cash-btn" formType="submit" bindtap="cashBtn">立即提现</button>
+      </view>
+    </form>
+  </view>
+</view>

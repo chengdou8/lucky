@@ -1,0 +1,14 @@
+<template name="rewardList"> 
+  <view class="seek-list mb10">
+    <view class="seek-row">
+      <span class="seek-amount">¥{{money}}</span><span class="seek-title">悬赏问道</span><span class="tag color-{{id}}">{{title}}</span>
+    </view>
+    <view class="seek-content">
+        {{description}}
+    </view>
+    <view class="seek-row">
+      <navigator url="../../pages/answer/answer?id={{id}}" class="btn btn-yellow" hover-class="navigator-hover">抢答</navigator>
+      <span class="seek-time">{{createtime}}</span>
+    </view>
+  </view>
+</template>

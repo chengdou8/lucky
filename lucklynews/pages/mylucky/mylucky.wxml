@@ -1,0 +1,54 @@
+<view class='container' bindtap='closeMenu'>
+  <view class='lucky_title'>我的绝招</view>
+    <view class='lucky_box'>
+      <view class='lucky_head'><image src="{{headImg}}"></image></view>
+      <view class='lucky_inner'>
+        <view class='lucky_scrol'>
+          <view class='lucky_field'>
+            <view class='lucky_able'>权威级：高深交流<span class="lucky_tag">90-100</span></view>
+            <view class='lucky_tags first'>
+
+            <span class='luck_tag' wx:key="{{badge_listzj.id}}" wx:for="{{badgelistzj}}" wx:for-index="idxttt" wx:for-item="badge_listzj" bindtap="dealChange" data-id="{{badge_listzj.id}}">{{badge_listzj.card_name}} {{badge_listzj.score}}分</span>
+
+             
+            </view>
+          </view>
+
+          <view class='lucky_field'>
+            <view class='lucky_able'>导师级：画龙点睛的指导<span class="lucky_tag">80-89</span></view>
+            <view class='lucky_tags second'>
+
+             <span class='luck_tag' wx:key="{{badge_listjs.id}}" wx:for="{{badgelistjs}}" wx:for-index="idxtt" wx:for-item="badge_listjs" bindtap="dealChange" data-id="{{badge_listjs.id}}">{{badge_listjs.card_name}} {{badge_listjs.score}}分</span>
+              
+            </view>
+          </view>
+
+          <view class='lucky_field'>
+            <view class='lucky_able'>良师级：提纲挈领的疏通<span class="lucky_tag">70-79</span></view>
+            <view class='lucky_tags three'>
+                 <span class='luck_tag' wx:key="{{badge_listjss.id}}" wx:for="{{badgelistjss}}" wx:for-index="idxt" wx:for-item="badge_listjss" bindtap="dealChange" data-id="{{badge_listjss.id}}">{{badge_listjss.card_name}} {{badge_listjss.score}}分</span>
+            </view>
+          </view>
+
+          <view class='lucky_field'>
+            <view class='lucky_able'>益友级：感同身受的互动</view>
+            <view class='lucky_tags four'>
+                 <span class='luck_tag' wx:key="{{badge_listtx.id}}" wx:for="{{badgelisttx}}" wx:for-index="idx" wx:for-item="badge_listtx" bindtap="dealChange" data-id="{{badge_listtx.id}}">{{badge_listtx.card_name}} {{badge_listtx.score}}分</span>
+            </view>
+          </view>
+
+          <view class='lucky_field'>
+            <view class='lucky_able'>进修级：发表观点到朋友圈刷高分，是金子一定会快速进阶</view>
+            <view class='lucky_tags five'>
+             <span class='luck_tag' wx:key="{{badge_list.id}}" wx:for="{{badgelist}}" wx:for-index="idxtttt" wx:for-item="badge_list" bindtap="dealChange" data-id="{{badge_list.id}}">{{badge_list.card_name}} {{badge_list.score}}分</span>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+
+<view class='sidemenu'>
+    <view class='side_nav idea' bindtap='home'>绝招</view>
+    <view class='side_nav my' bindtap='mylucky'>我的</view>
+</view>

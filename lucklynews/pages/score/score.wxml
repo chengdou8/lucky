@@ -1,0 +1,22 @@
+<view class='container'>
+  <form bindsubmit="formSubmit">
+    <view class='lucky_title'>猎手评测</view>
+    <view class='lucky_box'>
+      <view class='lucky_head'><image src="{{headImg}}"></image></view>
+      <view class='lucky_inner'>
+        <view class='lucky_field pstr'>
+          <view class='lucky_tag'>{{card_name}}</view>
+          <view class='lucky_score'><span>{{score}}</span></view>
+        </view>
+        <view class='lucky_snow'>专业心得</view>
+        <view class='lucky_detail'>{{card_description}}</view>
+      </view>
+    </view>
+
+    <view class='lucky_bottom'>
+      <view class='score_box'><slider bindchange="sliderBindchange" min="{{min}}" max="{{max}}" backgroundColor='#dddddd' selected-color='#6a4f43' block-size='14' block-color='#6a4f43' value='{{score}}' show-value/></view>
+      <button bindtap='scores' class='score_btn'>打分</button>
+    </view>
+  </form>
+</view>
+ 

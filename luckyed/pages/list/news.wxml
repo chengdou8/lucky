@@ -1,0 +1,20 @@
+<!--news.wxml-->
+<view class="container">
+    <!--文章列表模板-begin-->
+    <template name="lists">
+        <navigator url="../../pages/detail/detail?id={{id}}" class="newsItem" hover-class="navigator-hover">
+            <view class="newsImg">
+                <image src="{{thumb}}" backgroud-size="cover" mode="scaleToFill" ></image>
+            </view>
+            <view class="newsTitle">{{title}}</view>
+            <view class="newsTime">{{inputtime}}</view>
+        </navigator>
+    </template>
+    <!--文章列表模板-end-->
+
+    <!--循环输出列表-begin-->
+    <block wx:for="{{newsList}}">
+        <template is="lists" data="{{...item}}"/>
+    </block>
+    <!--循环输出列表-end-->
+</view>

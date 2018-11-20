@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="topTips" bindtap="topTips">
+    我也要发表观点，点击关注，赚取收益。
+  </view>
+
+  <view class="mark-row">
+    <view class="lucky-tips">您的技能被评为{{info.score}}分哦~</view>
+    <span class="tag {{tagcolor}}" bindtap="backlist">{{info.card_name}}</span><span class="branch {{tagcolor}}">{{info.score}}分</span>
+  </view>
+  <view class="topImg">
+    <image src="../../images/khxban06.jpg" mode="scaleToFill" ></image>
+  </view>
+  <view class="pointContent">
+    <view class="disRow">
+      <view class="pointdes">{{pointDetail.content}}</view>
+    </view>
+    <view class="imgList">
+      <view class="imgItem" wx:for="{{imgs}}" wx:key="myImg" wx:for-index="myImgindex" wx:for-item="myImg">
+        <image src="{{myImg}}" mode="scaleToFill" mode="widthFix"></image>
+      </view>
+    </view>
+    <view class="disTime">
+      <view class="edit" id="{{myview.id}}" data-id="{{myview.card_id}}" bindtap="modalcnt"><image src="../../images/del.png" mode="scaleToFill" ></image>删除</view>
+      {{pointDetail.createtime}}
+    </view>
+  </view>
+
+  <view class="modal-box" hidden="{{flag}}">
+    <view class="modal-panel">
+      <span class="close" bindtap="hideModal">关闭 ×</span>
+      <image src="../../images/20180110164438.jpg" mode="scaleToFill" ></image>
+      <view class='txt'>扫一扫或长按识别</view>
+    </view>
+  </view>
+</view>

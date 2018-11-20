@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="lucky-item">
+    <view class="lucky-img">
+      <image src="{{responderInfo.head_img}}" mode="scaleToFill" ></image>
+    </view>
+    <view class="lucky-article">
+      <view class="lucky-title">{{responderInfo.nickname}}</view>
+      <view class="lucky-state" wx:if="{{responderInfo.is_show == 1}}">已经确认回答</view>
+      <view class="lucky-money">
+        <image src="../../images/moneyIcon.jpg" mode="scaleToFill" ></image>
+        {{responderInfo.money}}元
+      </view>
+      <view class="tags">
+        <span class="tag color-3">{{responderInfo.title}}</span>
+      </view>
+    </view>
+  </view>
+
+  <view class="answer">
+    <view class="answert">{{responderInfo.description}}</view>
+    <view class="gray">剩余<span class="orange">{{remaining_time}}</span>小时，</view>
+    <view class="gray">已有<span>{{count}}</span>人回答，可以选中多个，多人平分奖金。</view>
+  </view>
+
+  <view class="commentlist" wx:if="{{count > 0}}">
+    <view class="commentitem" wx:for="{{answer_list}}" wx:key="answer" wx:for-item="answered" id="{{answered.id}}">
+      <view class="comments-img">
+        <image src="{{answered.head_img}}" mode="scaleToFill" ></image>
+      </view>
+      <view class="comments-article">
+        <view class="article-title"><span class="comments-time">{{answered.createtime}}</span>{{answered.nickname}}</view>
+      </view>
+      <view class="arcticle-content">{{answered.content}}</view>
+    </view>
+  </view>
+ 
+  <view class="bottom-fixed">
+    <form bindsubmit="formSubmit">
+      <view class="inputbox"><input type="text" class="lucky-input" name="content" placeholder="请输入您的绝招观点" /></view>
+      <button formType="submit" class="btn btn-yellow">抢答</button>
+    </form>
+  </view>
+</view>

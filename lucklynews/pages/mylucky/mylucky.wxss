@@ -1,0 +1,66 @@
+/*mylucky.wxss */
+.container {
+  background: url(http://www.luckymp.com//Public/Home/images/lucky_bg.jpg) no-repeat;
+  background-size: 100%;
+  display: block;
+}
+.sidemenu {
+  bottom: 1.5rem;
+}
+.lucky_box {
+  padding: 2rem 1.15rem 0 1.5rem;
+}
+.lucky_able {
+  font-size: 0.805rem;
+  color: #fff;
+}
+.lucky_able .lucky_tag {
+  background: url(http://www.luckymp.com//Public/Home/images/op50.png);
+  font-size: 0.75rem;
+  color: #684932;
+  border-radius: 8px;
+  padding: 1.5px 5px;
+  margin-left: 3px;
+}
+.lucky_field {
+  margin-top: 0.35rem;
+}
+.lucky_inner .lucky_field:first-child {
+  margin-top: 0;
+}
+.lucky_field .lucky_tags span {
+  font-size: 0.75rem;
+  color: #fff;
+  border:1px solid #fff;
+  border-radius: 8px;
+  padding: 0.5px 5px;
+  display: inline-block;
+  margin: 0.35rem 0.35rem 0 0;
+}
+.lucky_field .lucky_tags span:last-child {
+  margin-right: 0;
+}
+.lucky_field .first span {
+  color: #fca4af;
+  border-color: #fca4af;
+}
+.lucky_field .second span {
+  color: #d2adff;
+  border-color: #d2adff;
+}
+.lucky_field .three span {
+  color: #b5c6ff;
+  border-color: #b5c6ff;
+}
+.lucky_field .four span {
+  color: #4fdb47;
+  border-color: #4fdb47;
+}
+.lucky_field .five span {
+  color: #fff;
+  border-color: #fff;
+}
+.lucky_scrol {
+  height: 21.5rem;
+  overflow-y: scroll;
+}

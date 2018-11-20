@@ -1,0 +1,19 @@
+<template name="askeList"> 
+  <view class="seek-list mb10">
+    <view class="seek-item" id="{{id}}">
+      <view class="seek-img">
+        <image src="{{head_img}}" mode="scaleToFill" ></image>
+      </view>
+      <view class="seek-article">
+        <view class="article-title">{{nickname}}</view>
+        <view class="tags">
+          <span class="tag">{{card_name}} {{score}}分</span>
+        </view>
+      </view>
+      <view class="seek-row">
+        <navigator url="../../pages/mark/mark?id='{{id}}'&member_id='{{member_id}}'" class="btn btn-yellow">打分</navigator>
+        <span class="seek-time">{{createtime}}</span>
+      </view>
+    </view>
+  </view> 
+</template>

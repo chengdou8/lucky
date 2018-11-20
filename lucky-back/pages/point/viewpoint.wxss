@@ -1,0 +1,87 @@
+.mark-row {
+  background-color: #fff;
+  padding:10px;
+}
+.mark-row .branch {
+  display: inline-block;
+  font-size: .625rem;
+  padding: 2px 0 0 5px;
+  vertical-align: middle;
+  border:none;
+}
+.topImg image {
+  width:100%;
+  height:120px;
+  max-height:120px;
+  -webkit-box-shadow:0 2px 2px #CCC;
+  box-shadow:0 2px 2px #CCC;
+}
+.dist {
+  border-top: 1px solid #e5e5e5;
+  background-color: #fff;
+  padding-bottom: 60px;
+}
+.distItem {
+  margin: 5px 15px 10px;
+  padding-bottom: 5px; 
+  border-bottom: 1px solid #e5e5e5;
+}
+.dist .distItem:last-child  {
+  border-bottom-width: 0;
+}
+.disRow {
+  font-size: .75rem;
+  line-height: 1.5;
+}
+.lucky-tips {
+  font-size: .625rem;
+  color: #959595;
+  float: right;
+  padding-top: 5px;
+}
+.disTime {
+  font-size: .625rem;
+  color: #959595;
+  text-align: right;
+}
+.pointContent {
+  padding: 10px 15px;
+  margin-bottom: 45px;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+.imgItem {
+  margin: 5px 0;
+}
+.imgItem image {
+  width: 100%;
+}
+.bottom-fixed .movebox {
+  float: left;
+  width: 75%;
+}
+.wx-slider-track {
+  background: #fea758;
+  border-color: #fea758;
+}
+div.wx-slider-step {
+  background: #fea758;
+}
+.wx-slider-handle {
+  width: 28px !important;
+  height: 28px !important;
+  background: #fea758 !important; 
+}
+slider {
+  margin: 10px 25px 10px 18px;
+}
+.btn.btn-yellow {
+  position: relative;
+}
+.btn.btn-yellow .bin {
+  position:absolute;
+  left:-24px;
+  color:#888;
+  font-size:13px;
+  top:-1px;
+}

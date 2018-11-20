@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">未回答</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已回答</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">我的抢答</view>  
+  </view>  
+  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 45}}px" bindchange="bindChange">  
+    <swiper-item>  
+      <template name="problemList">
+        <view class="askItem mt10" id="{{id}}" bindtap="goAnswer">
+          <view class="askrow">
+            <span class="ask-time">{{createtime}}</span><span class="ask-name">{{card_name}}</span>
+          </view>
+          <view class="askCon">{{nickname}}</view>
+          <view class="askrow"><span class="askcontent">{{content}}</span></view>
+          <!-- <view wx:if="{{unanswered == null}}">没有未回答的问题</view> -->
+        </view>
+      </template>
+      <block wx:for="{{unanswered}}" wx:key="unanswer">
+          <template is="problemList" data="{{...item}}"/>
+      </block>
+    </swiper-item>  
+ 
+    <swiper-item>  
+      <template name="answerList">
+        <view class="askItem mt10" id="{{id}}" bindtap="answeredDetail">
+          <view class="askrow">
+            <span class="ask-time">{{createtime}}</span><span class="ask-name">{{card_name}}</span>
+          </view>
+          <view class="askCon">{{nickname}}</view>
+          <view class="askrow"><span class="askcontent">{{content}}</span></view>
+        </view>
+      </template>
+      <block wx:for="{{answered}}" wx:key="answer">
+          <template is="answerList" data="{{...item}}"/>
+      </block> 
+    </swiper-item>  
+
+    <swiper-item>
+      <template name="responderList">
+        <view class="askItem mt10">
+          <view class="askrow">
+            <span class="ask-amount">¥{{money}}</span><span class="ask-title">悬赏问道</span><span class="tag color-{{index}}">{{title}}</span>
+          </view>
+          <view class="askCon">{{description}}</view>
+          <view class="askrow">
+            <view data-id="{{id}}" bindtap="answerDetail" class='btn btn-yellow'>查看回答</view>
+            <span class="asktime">{{createtime}}</span>
+          </view>
+        </view>
+      </template>
+      <block wx:for="{{myreward}}" wx:key="myreward">
+          <template is="responderList" data="{{...item}}"/>
+      </block> 
+    </swiper-item>  
+</swiper>  
+</view>

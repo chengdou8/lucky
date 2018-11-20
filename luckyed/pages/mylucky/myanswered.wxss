@@ -1,0 +1,85 @@
+.lucky-right {
+  float: right;
+  text-align: right;
+  padding-top:5px;
+}
+.luckyr {
+  text-align: right;
+  padding-top:18px;
+}
+.lucky-state {
+  font-size:.725rem;
+  color:#959595;
+}
+.lucky-state span {
+  color: #fea758;
+  padding: 0 2px;
+}
+.lucky-money {
+  font-size: .725rem;
+  color: #fea758;
+}
+.lucky-money image {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 5px;
+}
+.lucky-title {
+  overflow:auto;
+}
+.mylucky-title,.mylucky-sex {
+  float: left;
+}
+.mylucky-sex image {
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.lucky-content {
+  padding: 10px 15px;
+  background-color:#fff;
+  margin-top:10px;
+  border-top:1px solid #efefef;
+  border-bottom:1px solid #efefef;
+}
+.luckyT {
+  font-size: .675rem;
+  color: #666;
+}
+.luckyC {
+  font-size: .675rem;
+  color: #959595;
+  padding: 5px 0;
+}
+.bottom-fixed .movebox {
+  float: left;
+  width: 75%;
+}
+.wx-slider-track {
+  background: #fea758;
+  border-color: #fea758;
+}
+div.wx-slider-step {
+  background: #fea758;
+}
+.wx-slider-handle {
+  width: 24px !important;
+  height: 24px !important;
+  background: #fea758 !important; 
+}
+slider {
+  margin: 10px 25px 10px 18px;
+}
+.btn.btn-yellow {
+  position: relative;
+}
+.btn.btn-yellow .bin {
+  position:absolute;
+  left:-24px;
+  color:#888;
+  font-size:13px;
+  top:-1px;
+}

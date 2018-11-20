@@ -1,0 +1,71 @@
+.lucky-title {
+  overflow:auto;
+}
+.mylucky-title,.mylucky-sex {
+  float: left;
+}
+.mylucky-sex image {
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.btn-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #fea758;
+}
+.btn-bar {
+  color: #fff;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column-reverse;
+  width: 50%;
+  text-align: center;
+  margin:10px 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; 
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.btn-box .btn-bar:last-child {
+  border-left: 1px solid #f5c9a2;
+}
+.record-list {
+  padding-top: 10px;
+}
+.record-list .record-item:first-child {
+  border-top:1px solid #efefef;
+}
+.record-item {
+  background-color:#fff;
+  border-bottom:1px solid #efefef;
+  padding:10px 15px;
+  font-size:.725rem;
+}
+.record-money,.record-time {
+  float: right;
+}
+.record-time {
+  font-size:.625rem;
+  color:#959595;
+}
+.states {
+  font-size:.625rem;
+  color:red;
+}
+.record-money {
+  font-size:.625rem;
+  color:red;
+}
+.balance {
+  font-size:.625rem;
+  color:#666;
+}

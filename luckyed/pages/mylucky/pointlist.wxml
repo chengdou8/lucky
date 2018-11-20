@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="topTips" bindtap="topTips">
+    我也要发表观点，点击关注，赚取收益。
+  </view>
+  <view class="mark-row">
+    <view bindtap="talk" class="btn btn-yellow" data-color="{{tagcolor}}">发表观点</view>
+    <span class="tag {{tagcolor}}">{{info.card_name}}</span><span class="branch {{tagcolor}}">{{info.score}}分</span>
+  </view>
+  
+  <view class="topImg">
+    <image src="../../images/20180110165525.jpg" mode="scaleToFill" ></image>
+  </view>
+
+  <view class="dist" wx:if="{{count > 0 & myviewlist != null}}">
+    <view class="distItem mt10" wx:for="{{myviewlist}}" wx:key="myviewlist" wx:for-item="myview" bindtap="viewpoint" id="{{myview.id}}" data-id="{{myview.card_id}}" data-color="{{tagcolor}}">
+      <view class="disRow">
+        <view class="pointdes">{{myview.content}}</view>
+      </view>
+      <view class="imgList" wx:if="{{myview.item_img != null && myview.item_img != '' && myview.item_img != undefined}}">
+        <view class="imgItem" wx:for="{{myview.item_img}}" wx:key="myImg" wx:for-index="myImgindex">
+          <image src="{{myview.item_img[myImgindex]}}" mode="aspectFill"></image>
+        </view>
+      </view>
+      <view class="disTime">
+        <view class="edit" catchtap="modalcnt" id="{{myview.id}}" data-id="{{myview.card_id}}"><image src="../../images/del.png" mode="scaleToFill" ></image>删除</view>
+        {{myview.createtime}}
+      </view>
+    </view>
+  </view>
+
+  <view class="modal-box" hidden="{{flag}}">
+    <view class="modal-panel">
+      <span class="close" bindtap="hideModal">关闭 ×</span>
+      <image src="../../images/20180110164438.jpg" mode="scaleToFill" ></image>
+      <view class='txt'>扫一扫或长按识别</view>
+    </view>
+  </view>
+</view>

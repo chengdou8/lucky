@@ -1,0 +1,25 @@
+Page({
+  data:{
+    // text:"这是一个页面"
+    min:'20',
+    max:'150',
+    text:'',
+    switchState:'开'
+  },
+  sliderBindchange:function(e){
+    this.setData({
+      text:e.detail.value
+    })
+  },
+  switchBindchange:function(e){
+    if(e.detail.value){
+      this.setData({
+        switchState:'开'
+      })
+    }else{
+      this.setData({
+        switchState:'关'
+      })
+    }    
+  }
+})

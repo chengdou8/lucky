@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="mark-row">
+    <view class="lucky-tips">您的技能被评为{{info.score}}分哦~</view>
+    <span class="tag {{tagcolor}}">{{info.card_name}}</span><span class="branch {{tagcolor}}">{{info.score}}分</span>
+  </view>
+
+  <view class="topImg">
+    <image src="../../images/khxban05.jpg" mode="scaleToFill" ></image>
+  </view>
+
+  <view class="lucky-content">
+    <form bindsubmit="formSubmit">
+      <view class="textarea-box">
+          <textarea class="lucky-area" placeholder="介绍你的绝招经验和能解决的问题，以及独特理念和历练路程，取得行业成就等" name="content" value="{{content}}"></textarea>
+      </view>
+
+      <view class="imgUpload">
+        <view class="luckTitle">上传图片 · <span class="yellow">图片秀绝招</span></view>
+        <view class="imgList">
+          <view class="weui-cells">
+            <view class="weui-cell">
+              <view class="weui-cell__bd">
+                <view class="weui-uploader">
+                  <view class="weui-uploader__bd">
+                    <view class="weui-uploader__files">
+                        <view class="weui-uploader__file" wx:for="{{imglist}}" wx:key="img" wx:for-item="image">
+                          <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="viewimg" mode="scaleToFill"></image>
+                        </view>
+                    </view>
+                    <view class="weui-uploader__input-box" hidden="{{flag}}">
+                      <view class="weui-uploader__input" bindtap="checkimg"></view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        
+      </view>
+      <button form-type="submit" class="btn btn-yellow bottom">发表观点</button>
+    </form>
+  </view>
+</view>

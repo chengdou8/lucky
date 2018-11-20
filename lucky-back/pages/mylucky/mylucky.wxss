@@ -1,0 +1,134 @@
+.mylucky-item {
+  background-color:#fff;
+  padding:10px 20px;
+  overflow:hidden;
+  border-bottom: 1px solid #efefef;
+  position: relative;
+}
+.mylucky-img {
+  float:left;
+  width:60px;
+  height:60px;
+  line-height:60px;
+  text-align:center;
+  background-color:#eee;
+  border-radius:50%;
+  -webkit-box-shadow:0 3px 3px #bbb;
+  box-shadow:0 3px 3px #bbb;
+}
+.mylucky-img image {
+  width:100%;
+  height:100%;
+  vertical-align:top;
+  border-radius:50%;
+}
+.mylucky-title,.mylucky-sex {
+  float: left;
+}
+.mylucky-sex image {
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.lucky-article .btn {
+  float:right;
+  padding:3px 15px 1px;
+  font-size:.625rem;
+  margin-top: 15px;
+}
+.lucky-article .btn span {
+  font-size:.45rem;
+  padding:0 3px;
+}
+.mylucky-dl {
+  padding: 15px;
+}
+.mylucky-dt {
+  font-size: .875rem;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 5px;
+}
+.mylucky-dt .edit {
+  float: right;
+  font-size: .725rem;
+  color: #fea758;
+}
+.mylucky-dt .edit image {
+  float:left;
+  width:14px;
+  height:14px;
+  margin:2px;
+}
+.mylucky-dt image {
+  width: 17px;
+  height: 24px;
+  float: left;
+  margin: 2px 5px 0 0;
+}
+.mylucky-dd {
+  padding: 10px 0 12px;
+  color: #959595;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: .725rem;
+}
+.mylucky-dl .mylucky-dd:last-child {
+  border: none;
+}
+.mylucky-dd .tags {
+  display: block;
+  overflow: visible;
+}
+.mylucky-dd .tag {
+  margin-left: 5px;
+}
+.mylucky-dd view.tag {
+  margin-left: 0;
+  margin-right: 8px;
+  position:relative;
+  z-index:1;
+}
+.mylucy-con {
+  text-align: center;
+  color: #959595;
+  font-size: .725rem;
+}
+.mylucky-group {
+  text-align: center;
+  padding: 15px 0;
+}
+.mylucky-group .btn {
+  width: 25%;
+  padding: 3px 0;
+  margin: 0 5px;
+}
+.mylucky-dd .tag span {
+  width:12px;
+  height:12px;
+  border:1px solid #fea758;
+  border-radius:50%;
+  position:absolute;
+  background-color:#fff;
+  z-index:99;
+  right:-6px;
+  top:-6px;
+  font-size: 6px;
+  color: #fea758;
+  line-height: 12px;
+  text-align: center;
+}
+.share {
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  z-index: 101;
+  background:rgba(0,0,0,0.4);
+  overflow: hidden;
+  text-align: right;
+}
+.share image {
+  width: 240px;
+  height: 220px;
+}

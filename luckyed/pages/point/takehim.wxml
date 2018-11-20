@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="lucky-item">
+    <view class="lucky-img">
+      <image src="{{userinfo.head_img}}" mode="scaleToFill" ></image>
+    </view>
+
+    <view class="lucky-article">
+      <span class="mylucky-title">{{userinfo.nickname}}</span>
+      <span wx:if="{{userinfo.sex==1}}" class="mylucky-sex"><image src="../../images/1.png" mode="scaleToFill" ></image></span>
+      <span wx:elif="{{userinfo.sex==2}}" class="mylucky-sex"><image src="../../images/2.png" mode="scaleToFill" ></image></span>
+      <span wx:else="{{userinfo.sex==0}}" class="mylucky-sex"><image src="../../images/0.png" mode="scaleToFill" ></image></span>
+    </view>
+    <view class="lucky-topbg" style="background-image:url('{{userinfo.head_img}}')"></view>
+  </view>
+
+  <view class="mark-row">
+    <view class="lucky-tips">您的技能被评为{{info.score}}分哦~</view>
+    <view wx:if="{{info.score > 89 && info.score < 101}}"><span class="tag color-5">{{info.card_name}}</span><span class="branch color-5">{{info.score}}分</span></view>
+    <view wx:if="{{info.score > 79  && info.score < 90}}"><span class="tag color-2">{{info.card_name}}</span><span class="branch color-2">{{info.score}}分</span></view>
+    <view wx:if="{{info.score > 69 && info.score < 80}}"><span class="tag color-3">{{info.card_name}}</span><span class="branch color-3">{{info.score}}分</span></view>
+    <view wx:if="{{info.score > 59 && info.score < 70}}"><span class="tag color-6">{{info.card_name}}</span><span class="branch color-6">{{info.score}}分</span></view>
+    <view wx:if="{{info.score > 0 && info.score < 60}}"><span class="tag color-4">{{info.card_name}}</span><span class="branch color-4">{{info.score}}分</span></view>
+  </view>
+
+  <view class="lucky-content">
+    <form bindsubmit="formSubmit">
+      <view class="qustion">{{qalabelinfo}}</view>
+      <view class="textarea-box">
+          <textarea class="lucky-area" placeholder="写下您的问题，等Ta回答。" name="description" value="{{description}}"></textarea>
+      </view>
+
+      <view class="btn-group">
+        <button class="btn btn-yellow answer-btn" formType="submit">礼　　问道</button>
+        <image src="../../images/chabei.png" mode="scaleToFill"></image>
+        <view class="paymoney">礼茶需支付<span class="number"> ￥{{money}} </span>元</view>
+      </view>
+    </form>
+  </view>
+</view>

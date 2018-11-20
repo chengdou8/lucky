@@ -1,0 +1,131 @@
+.answer-share {
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  background-color: #fea758;
+  padding:  0 15px;
+  font-size:.75rem;
+}
+.lucky-right {
+  float: right;
+  text-align: right;
+  padding-top:5px;
+}
+.lucky-state {
+  font-size:.725rem;
+  color:#959595;
+}
+.lucky-money {
+  font-size: .725rem;
+  color: #fea758;
+}
+.lucky-money image {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 5px;
+}
+.answer {
+  background-color: #fff;
+  padding: 15px;
+  font-size: .725rem;
+  border-bottom:1px solid #efefef;
+}
+.answert {
+  padding-bottom: 10px;
+}
+.answer .orange {
+  padding: 0 5px;
+}
+.commentlist {
+  margin-top: 10px;
+  border-top: 1px solid #efefef;
+}
+.commentitem {
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+  padding: 10px 15px;
+  overflow: hidden;
+}
+.comments-article {
+  margin-left: 40px;
+}
+.comments-time {
+  float: right;
+  color: #bbb;
+  font-size: .725rem;
+}
+.comments-img {
+  float:left;
+  width:30px;
+  height:30px;
+  line-height:30px;
+  text-align:center;
+  background-color:#eee;
+  border-radius:50%;
+  -webkit-box-shadow:0 3px 3px #bbb;
+  box-shadow:0 3px 3px #bbb;
+}
+.comments-img image {
+  width:100%;
+  height:100%;
+  vertical-align:top;
+  border-radius:50%;
+}
+.arcticle-content {
+  clear:both;
+  padding-top:5px;
+  color: #666;
+  font-size: .785rem;
+}
+.share {
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  z-index: 101;
+  background:rgba(0,0,0,0.4);
+  overflow: hidden;
+  text-align: right;
+}
+.share image {
+  width: 240px;
+  height: 220px;
+}
+.btn-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #fea758;
+}
+.btn-bar {
+  color: #fff;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column-reverse;
+  width: 100%;
+  text-align: center;
+  margin:10px 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; 
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.checkbox-label {
+  float: right;
+}
+.wx-checkbox-input {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  margin: 0 !important;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  color: #fea758 !important;
+  border-color: #fea758 !important;
+}

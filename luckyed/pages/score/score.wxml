@@ -1,0 +1,10 @@
+ <view>微信小程序组件：滑动选择器slider</view>
+ <slider bindchange="sliderBindchange" min="{{min}}" max="{{max}}" show-value/>
+ <view>最小值：{{min}}</view>
+ <view>最大值：{{max}}</view>
+ <view>当前值：{{text}}</view>
+ <view>---------------------------------</view>
+ <view>微信小程序组件：开关组件switch</view>
+ <switch checked type="switch" bindchange="switchBindchange"/>
+ <view>开关组件当前状态：{{switchState}}</view>
+ 

@@ -1,0 +1,76 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/reward/reward",
+    "pages/seek/seek",
+    "pages/mentor/mentor",
+    "pages/mylucky/mylucky",
+    "pages/point/point",
+    "pages/point/viewpoint",
+    "pages/point/takehim",
+    "pages/answer/answer",
+    "pages/otherlucky/otherlucky",
+    "pages/mylucky/askme",
+    "pages/mylucky/cashrecord",
+    "pages/mylucky/withdrawal",
+    "pages/mylucky/answered",
+    "pages/mylucky/unanswered",
+    "pages/mylucky/answerDetail",
+    "pages/mylucky/myanswerDetail",
+    "pages/mylucky/myproblem",
+    "pages/mylucky/myanswered",
+    "pages/mylucky/pointlist",
+    "pages/mylucky/viewpoint",
+    "pages/mylucky/talk"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#373a3f",
+    "navigationBarTitleText": "lucky",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#fea758",
+    "list": [
+      {
+        "selectedIconPath": "images/juezhaoActive.png",
+        "iconPath": "images/juezhao.png",
+        "pagePath": "pages/index/index",
+        "text": "我有绝招"
+      },
+      {
+        "selectedIconPath": "images/wdysActive.png",
+        "iconPath": "images/wdys.png",
+        "pagePath": "pages/reward/reward",
+        "text": "问道于师"
+      },
+      {
+        "selectedIconPath": "images/mpActive.png",
+        "iconPath": "images/mp.png",
+        "pagePath": "pages/seek/seek",
+        "text": "绝招发现"
+      },
+      {
+        "selectedIconPath": "images/zhiwozheActive.png",
+        "iconPath": "images/zhiwozhe.png",
+        "pagePath": "pages/mentor/mentor",
+        "text": "知我者谁"
+      },
+      {
+        "selectedIconPath": "images/myjzActive.png",
+        "iconPath": "images/myjz.png",
+        "pagePath": "pages/mylucky/mylucky",
+        "text": "我的绝招"
+      }
+    ]
+  },
+  
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket":1000,
+    "uploadFile":1000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

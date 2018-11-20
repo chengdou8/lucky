@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="lucky-item">
+    <view class="lucky-img">
+      <image src="{{userinfo.head_img}}" mode="scaleToFill" ></image>
+    </view>
+    <view class="lucky-article">
+      <view class="lucky-title">
+        <span class="mylucky-title">{{userinfo.nickname}}</span>
+        <span wx:if="{{userinfo.sex==1}}" class="mylucky-sex"><image src="../../images/1.png" class="mylucky-sex" mode="scaleToFill" ></image></span>
+        <span wx:elif="{{userinfo.sex==2}}" class="mylucky-sex"><image src="../../images/2.png" class="mylucky-sex" mode="scaleToFill" ></image></span>
+        <span wx:else="{{userinfo.sex==0}}" class="mylucky-sex"><image src="../../images/0.png" class="mylucky-sex" mode="scaleToFill" ></image></span>
+      </view>
+      <view class="luckyr">
+        <view class="lucky-state">Ta已向您支付了<span>{{result.money}}</span>元</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="lucky-content">
+    <view class="luckyT">Ta的问题：</view>
+    <view class="luckyC">{{result.content}}</view>
+    <view class="luckyT">您的的回答：</view>
+    <form bindsubmit="formSubmit">
+      <view class="luckyC">
+        <textarea class="lucky-area" placeholder="写下您的专业观点，为他答疑解惑，不少于70字" name="questionC" value="{{content}}"></textarea>
+      </view>
+
+      <view class="btn-group">
+        <button class="btn btn-yellow answer-btn" formType="submit">以　　会友</button>
+        <image src="../../images/chabei.png" mode="scaleToFill"></image>
+      </view>
+    </form>
+  </view>
+</view>

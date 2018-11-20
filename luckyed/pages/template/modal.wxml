@@ -1,0 +1,5 @@
+<modal class="modal" hidden="{{modalFlag}}" no-cancel bindconfirm="modalOk">  
+    <view class="dew">  
+      <image src="../../images/ts.png" class="age"></image>  
+    </view>  
+</modal>

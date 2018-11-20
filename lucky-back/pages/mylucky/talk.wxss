@@ -1,0 +1,103 @@
+
+.mark-row {
+  background-color: #fff;
+  padding:10px;
+}
+.mark-row .branch {
+  display: inline-block;
+  font-size: .625rem;
+  padding: 2px 0 0 5px;
+  vertical-align: middle;
+  border: none;
+}
+.topImg image {
+  width:100%;
+  height:92px;
+  max-height:92px;
+  -webkit-box-shadow:0 2px 2px #CCC;
+  box-shadow:0 2px 2px #CCC;
+}
+.lucky-tips {
+  font-size: .625rem;
+  color: #959595;
+  float: right;
+  padding-top: 5px;
+}
+.lucky-content {
+  padding: 10px 15px;
+}
+.lucky-area {
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  min-height: 180px;
+  width: 100%;
+  padding: 10px;
+  font-size: .75rem;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; 
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.luckTitle {
+  padding: 10px 0;
+  font-size: .75rem;
+}
+.yellow {
+  color: #fea758;
+}
+.imgList {
+  display: flex;
+  flex-direction: row;
+}
+.imgList .imgItem {
+  display: inline-flex;
+  height: auto;
+  flex-grow: 1;
+  padding: 5px 0;
+}
+.imgList .imgItem:first-child {
+  padding-right: 1%;
+}
+.imgList .imgItem:nth-child(2),.imgList .imgItem:nth-child(3),.imgList .imgItem:nth-child(4) {
+  padding-left: 1%;
+}
+.imgItem image {
+  width: 25%;
+}
+.btn.bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  border-radius: 0;
+  font-size: .75rem;
+}
+.weui-cells {
+  margin-top: 0;
+  background: transparent;
+}
+.weui-cells:after,.weui-cells:before {
+  border:0 none
+}
+.weui-cell {
+  padding: 0;
+}
+.weui-uploader__bd {
+  display: flex;
+  flex-direction:row;
+}
+.weui-uploader__input-box {
+  background-color: #fff;
+  border: 2px dashed #d9d9d9;
+  border-radius: 8px;
+  width: 75px;
+  height: 75px;
+}
+.weui-uploader__img {
+  border-radius: 8px;
+}

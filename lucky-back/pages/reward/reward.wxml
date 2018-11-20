@@ -1,0 +1,79 @@
+<view class='container'>
+  <view class="topImg">
+    <image src="../../images/khxban02.jpg" mode="scaleToFill" ></image>
+  </view>
+  <view class="field">
+    <view class="flex2">
+      <view class="rows active">
+        <view class="field-title">问道于师</view>
+        <view class="field-txt">找到观点一致，最懂你的人</view>
+      </view>
+      <view class="rows">
+        <navigator url="/pages/seek/seek" open-type="switchTab">
+          <view class="field-title">共享绝招</view>
+          <view class="field-txt">集思广益，博采众长</view>
+          <view class="arrow-right arrow-box">
+            <b class="right"><i class="right-arrow1"></i><i class="right-arrow2"></i></b>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="textarea-box">
+      <view class="textarea">
+        <textarea class="comments" placeholder="请描述你的问题，系统智能匹配绝招老师，为你做经验分享和指导" name="description" value="{{description}}" hidden="{{hidearea}}" fixed="{{fixed}}"></textarea>
+      </view>
+      <label class="checkbox" bindtap="inputChange">
+        <input type="text" class="{{anonymous == 0? 'normal':'isChecked'}}" name="anonymous" value="{{anonymous == 0? '0':'1'}}" disabled="disabled" />
+        <text class="label-text">匿名</text>
+      </label>
+    </view>
+    <view class="text-box">
+      <input type="text" name="ctitle" value="{{ctitle}}" placeholder="请输入关键字，系统为你精准匹配" />
+      <view class="exp mt5">
+        <view class="exp-title">示例</view>
+        <view class="tags">
+          <span class="tag color-3">心理咨询</span><span class="tag color-6">买房</span>
+          <span class="tag color-2">两性关系</span><span class="tag color-5">就业规划</span>
+          <span class="tag color-4">高考志愿</span>
+        </view>
+      </view>
+    </view>
+
+    <view class="field mt10">
+      <view class="field-t">
+        <image src="../../images/iocnRule.png"></image>
+        悬赏细则
+        <view class="rules" bindtap="rules">
+          <view class="arrow-right arrow-box">
+            <b class="right"><i class="right-arrow1"></i><i class="right-arrow2"></i></b>
+          </view>
+        </view>
+      </view>
+
+      <view class="btn-group">
+        <button formType="submit" class="btn btn-yellow">悬赏问道</button>
+        <view class="paymoney">需支付<span class="number"> ￥{{money}} </span>元</view>
+      </view>
+    </view>
+  </form>
+
+  <view class="modal-box" hidden="{{flag}}">
+    <view class="modal-body">
+      <view class="modal-header"><span class="close" bindtap="hideModal">×</span>悬赏细则</view>
+      <view class="modal-content">
+        <view class="making">
+          <view>悬赏细则</view>
+          <view>1．	提出问题，支付赏金后，绝招分手高的答主将开始抢答；</view>
+          <view>2．	你可以选择满意的回答，其答主将获得赏金；</view>
+          <view>3．	若48小时内无人抢答，则全额退款；</view>
+          <view>4．	若48小时内没有选中满意回答，参与抢答的答主平分赏金。</view>
+          <view class="btn-group">
+            <button class="btn btn-yellow" bindtap="hideModal">我已阅读</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

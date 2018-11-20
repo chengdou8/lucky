@@ -1,0 +1,22 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/score/score",
+    "pages/mylucky/mylucky",
+    "pages/login/login"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#373a3f",
+    "navigationBarTitleText": "lucky",
+    "navigationBarTextStyle":"#fff"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket":1000,
+    "uploadFile":1000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

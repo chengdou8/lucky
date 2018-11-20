@@ -1,0 +1,48 @@
+<view class="container">
+  <view bindtap="share" class="answer-share">分享到朋友圈或发送给朋友，找人解答</view>
+  <view class="lucky-item">
+    <view class="lucky-img">
+      <image src="{{responderInfo.head_img}}" mode="scaleToFill" ></image>
+    </view>
+    <view class="lucky-article">
+      <view class="lucky-right">
+        <view class="lucky-state" wx:if="{{responderInfo.is_show == 1}}">已经确认回答</view>
+        <view class="lucky-money">
+          <image src="../../images/moneyIcon.jpg" mode="scaleToFill" ></image>
+          <span class="moneynum">{{responderInfo.money}}元</span>
+        </view>
+      </view>
+      <view class="lucky-title">{{responderInfo.nickname}}</view>
+      <view class="tags">
+        <span class="tag color-3">{{responderInfo.title}}</span>
+      </view>
+    </view>
+  </view>
+
+  <view class="answer">
+    <view class="answert">{{responderInfo.description}}</view>
+    <view class="gray">剩余<span class="orange">{{remaining_time}}</span>小时，</view>
+    <view class="gray">已有<span>{{count}}</span>人回答，可以选中多个，多人平分奖金。</view>
+  </view>
+
+  <view class="commentlist">
+    <template name="commenList">
+      <view class="commentitem">
+        <view class="comments-img">
+          <image src="{{head_img}}" mode="scaleToFill" ></image>
+        </view>
+        <view class="comments-article">
+          <view class="article-title"><span class="comments-time">{{createtime}}</span>{{nickname}}</view>
+        </view>
+        <view class="arcticle-content">{{content}}</view>
+      </view>
+    </template>
+    <block wx:for="{{answer_list}}" wx:key="comment">
+        <template is="commenList" data="{{...item}}"/>
+    </block>
+  </view>
+
+  <view class="share" bindtap="closeshare" hidden="{{flag}}">     
+      <image src="../../images/share.png"></image>
+  </view>
+</view>

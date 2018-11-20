@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="lucky-item">
+    <view class="lucky-img">
+      <image src="{{userinfo.head_img}}" mode="scaleToFill" ></image>
+    </view>
+
+    <view class="lucky-article">
+      <view bindtap="finder" class="btn btn-yellow">发<span>●</span>现</view>
+      <span class="mylucky-title">{{userinfo.nickname}}</span>
+      <span wx:if="{{userinfo.sex==1}}" class="mylucky-sex"><image src="../../images/1.png" mode="scaleToFill" ></image></span>
+      <span wx:elif="{{userinfo.sex==2}}" class="mylucky-sex"><image src="../../images/2.png" mode="scaleToFill" ></image></span>
+      <span wx:else="{{userinfo.sex==0}}" class="mylucky-sex"><image src="../../images/0.png" mode="scaleToFill" ></image></span>
+    </view>
+  </view>
+
+  <view class="mylucky-dl">
+      <view class="mylucky-dt">
+        <image src="../../images/20171212151041.png" mode="scaleToFill" ></image>技能荣誉徽章
+      </view>
+      <view class="mylucky-dd">专家级：达到一定级别的高深交流<span class="tag" wx:if="{{badgelistzj == null}}">90-100</span>
+        <view class="tags" wx:if="{{badgelistzj !=null}}">
+          <view wx:for="{{badgelistzj}}" wx:key="badgelistzj" wx:for-item="listzj" class="tag color-5" id="{{listzj.id}}"  bindtap="viewpoint">{{listzj.card_name}} {{listzj.score}}分
+          </view>
+        </view>
+      </view>
+      <view class="mylucky-dd">教授级：画龙点睛的沟通<span class="tag" wx:if="{{badgelistjs == null}}">80-89</span>
+        <view class="tags" wx:if="{{badgelistjs != null}}">
+          <view wx:for="{{badgelistjs}}" wx:key="badgelistjs" wx:for-item="listjs" class="tag color-2" id="{{listjs.id}}" bindtap="viewpoint">{{listjs.card_name}} {{listjs.score}}分
+          </view>
+        </view>
+      </view>
+      <view class="mylucky-dd">老师级：提纲挈领的知识<span class="tag" wx:if="{{badgelistjss == null}}">70-79</span>
+        <view class="tags" wx:if="{{badgelistjss != null}}">
+          <view wx:for="{{badgelistjss}}" wx:key="badgelistjss" wx:for-item="listjss" class="tag color-3" id="{{listjss.id}}" bindtap="viewpoint">{{listjss.card_name}} {{listjss.score}}分
+          </view>
+        </view>
+      </view>
+      <view class="mylucky-dd">同学级：感同身受的交流会<span class="tag" wx:if="{{badgelisttx == null}}">60-69</span>
+        <view class="tags" wx:if="{{badgelisttx != null}}">
+          <view wx:for="{{badgelisttx}}" wx:key="badgelisttx" wx:for-item="listtx" class="tag color-6" id="{{listtx.id}}" bindtap="viewpoint">{{listtx.card_name}} {{listtx.score}}分
+          </view>
+        </view>
+      </view>
+      <view class="mylucky-dd">进修级<span class="tag" wx:if="{{badgelist == null}}">50-59</span>
+        <view class="tags" wx:if="{{badgelist != null}}">
+          <view wx:for="{{badgelist}}" wx:key="badgelist" wx:for-item="list" class="tag color-4" id="{{list.id}}" bindtap="viewpoint">{{list.card_name}} {{list.score}}分</view>
+        </view>
+      </view>
+  </view>
+</view>

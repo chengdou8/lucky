@@ -1,0 +1,55 @@
+/**index.wxss**/
+.topImg {
+  max-height: 108px;
+}
+.topImg image {
+  width: 100%;
+  max-height: 102px;
+  -webkit-box-shadow:0 2px 2px #CCC;
+  box-shadow: 0 2px 2px #CCC;
+}
+.field-tips {
+  font-size: .725rem;
+  color: #b9b9b9;
+  word-break:keep-all;          
+  white-space:nowrap;         
+  overflow:hidden;             
+  text-overflow:ellipsis;
+}
+.field .comments {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #EEE;
+  font-size: 0.725rem;
+  margin-top: 5px;
+  padding: 5px 0;
+  -webkit-appearance: none;
+  overflow:auto;  
+  word-break:break-all;
+  height: 60px;
+  position: relative;
+}
+.field-top {
+  color: #fea758;
+  line-height: 2.375em;
+  font-size: .725rem;
+  overflow: hidden;
+}
+.field-top .field-txt {
+  color: #222;
+  display: block;
+  width:100%;
+  word-break:keep-all;          
+  white-space:nowrap;         
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.r-tips image {
+  width:24px;
+  height:24px;
+  float: left;
+  margin-top: 1px;
+}
+.btn-group {
+  padding-top: 0;
+}

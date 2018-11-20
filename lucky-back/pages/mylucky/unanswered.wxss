@@ -1,0 +1,81 @@
+.lucky-right {
+  float: right;
+  text-align: right;
+  padding-top:5px;
+}
+.luckyr {
+  text-align: right;
+  padding-top:18px;
+}
+.lucky-state {
+  font-size:.725rem;
+  color:#959595;
+}
+.lucky-state span {
+  color: #fea758;
+  padding: 0 2px;
+}
+.lucky-money {
+  font-size: .725rem;
+  color: #fea758;
+}
+.lucky-money image {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 5px;
+}
+.lucky-title {
+  overflow:auto;
+}
+.mylucky-title,.mylucky-sex {
+  float: left;
+}
+.mylucky-sex image {
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.lucky-content {
+  padding: 10px 15px;
+}
+.luckyT {
+  font-size: .675rem;
+  color: #666;
+}
+.luckyC {
+  font-size: .675rem;
+  color: #959595;
+  padding: 5px 0;
+}
+.lucky-area {
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  min-height: 180px;
+  width: 100%;
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; 
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.answer-btn {
+  width:100%;
+  padding:2px 0;
+  margin-top:10px;
+  font-size: .875rem;
+}
+.btn-group {
+  position: relative;
+}
+.btn-group image {
+  width:32px;
+  height:32px;
+  position:absolute;
+  left:43%;
+  top:25px;
+}

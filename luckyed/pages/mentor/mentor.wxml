@@ -1,0 +1,39 @@
+<view class="container">
+  <form class="search-form" bindsubmit="searchSubmit">
+    <view class="search-box">
+      <image src="../../images/search.png"></image>
+      <input value="{{search.searchValue}}" placeholder="请输入关键字" class="search-input" bindfocus="focusSearch" bindinput="searchActiveChangeinput" auto-focus="true" name="searchKeyWords" />
+      <button wx:if="{{search.showClearBtn}}" catchtap="searchActiveChangeclear" form-type="reset" class="search-claer">
+        <icon type="clear" size="16" class="clear-icon"></icon>
+      </button>
+    </view>
+  </form>
+
+  <view class="weui-cells searchbar-result">
+    <view wx:for="{{info}}" class="weui-panel weui-panel_access" id="{{mentor.id}}" wx:key="mentor" wx:for-item="mentor">
+        <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" bindtap="otherlucky" id="{{mentor.member_id}}" data-id="{{mentor.openid}}" data-name="{{mentor.nickname}}" src="{{mentor.head_img}}" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">
+                       {{mentor.nickname}}
+                    </view>
+                    <view class="weui-media-box__desc">
+                      <span wx:if="{{tags.score > 89 && tags.score < 101}}" class="tag color-5" bindtap="viewTag" wx:for="{{mentor.lable}}" wx:key="tag" wx:for-item="tags" data-id="{{tags.openid}}" id="{{tags.id}}">{{tags.card_name}}</span>
+                      <span wx:if="{{tags.score > 79 && tags.score < 90}}" class="tag color-2" bindtap="viewTag" wx:for="{{mentor.lable}}" wx:key="tag" wx:for-item="tags" data-id="{{tags.openid}}" id="{{tags.id}}">{{tags.card_name}}</span>
+                      <span wx:if="{{tags.score > 69 && tags.score < 80}}" class="tag color-3" bindtap="viewTag" wx:for="{{mentor.lable}}" wx:key="tag" wx:for-item="tags" data-id="{{tags.openid}}" id="{{tags.id}}">{{tags.card_name}}</span>
+                      <span wx:if="{{tags.score > 59 && tags.score < 70}}" class="tag color-6" bindtap="viewTag" wx:for="{{mentor.lable}}" wx:key="tag" wx:for-item="tags" data-id="{{tags.openid}}" id="{{tags.id}}">{{tags.card_name}}</span>
+                      <span wx:if="{{tags.score > 0 &&  tags.score < 60}}" class="tag color-4" bindtap="viewTag" wx:for="{{mentor.lable}}" wx:key="tag" wx:for-item="tags" data-id="{{tags.openid}}" id="{{tags.id}}">{{tags.card_name}}</span>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+  </view>  
+
+  <view class="btn-group bottom">
+    <view bindtap="problem" class="btn btn-yellow">我提问的问题</view>
+  </view>
+</view>

@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="mark-row">
+    <view bindtap="takehim" class="btn btn-yellow">向他取经</view>
+    <view wx:if="{{info.score > 89 && info.score < 101}}"><span class="tag color-5">{{info.card_name}}</span><span class="branch color-5">{{info.score}}分</span></view>
+    <view wx:if="{{info.score > 79 && info.score < 90}}"><span class="tag color-2">{{info.card_name}}</span><span class="branch color-2">{{info.score}}分</span></view>
+    <view wx:if="{{info.score > 69 && info.score < 80}}"><span class="tag color-3">{{info.card_name}}</span><span class="branch color-3">{{info.score}}分</span></view>
+    <view wx:if="{{info.score > 59 && info.score < 70}}"><span class="tag color-6">{{info.card_name}}</span><span class="branch color-6">{{info.score}}分</span></view>
+    <view wx:if="{{info.score > 0 && info.score < 60}}"><span class="tag color-4">{{info.card_name}}</span><span class="branch color-4">{{info.score}}分</span></view>
+  </view>
+  
+  <view class="topImg">
+    <image src="../../images/20180110165525.jpg" mode="scaleToFill" ></image>
+  </view>
+
+  <view class="dist" wx:if="{{count > 0}}">
+    <view class="distItem mt10" wx:for="{{myviewlist}}" wx:key="myviewlist" wx:for-item="myview" bindtap="viewpoint" id="{{myview.id}}" data-id="{{myview.card_id}}">
+      <view class="disRow">
+        <view class="pointdes">{{myview.content}}</view>
+      </view>
+      <view class="imgList">
+        <view class="imgItem" wx:for="{{myview.item_img}}" wx:key="myImg" wx:for-index="myImgindex">
+          <image src="{{myview.item_img[myImgindex]}}" mode="aspectFill"></image>
+        </view>
+      </view>
+      <view class="disTime">{{myview.createtime}}</view>
+    </view>
+  </view>
+
+  <view class="bottom-fixed">
+    <view class="movebox">
+      <view class="section section_gap">
+        <view class="body-view">
+            <slider value="{{info.score}}" activeColor="#fea758" bindchange="slider4change" min="{{minscore}}" max="{{maxscore}}" show-value/>
+        </view>
+      </view>
+    </view>
+    <view bindtap="giveScore" class="btn btn-yellow"><span class="bin">分</span>绝招评分</view>
+  </view>
+</view>

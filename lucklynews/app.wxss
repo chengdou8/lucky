@@ -1,0 +1,104 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.lucky_title {
+  padding: 0.75rem 0;
+  font-size: 1.15rem;
+  color: #fff;
+  text-align: center;
+}
+.lucky_head {
+  float: left;
+  width: 3.75em;
+  height: 3.75em; 
+}
+.lucky_head image {
+  width: 3.75em;
+  height: 3.75em;
+  border-radius: 50%;
+}
+.lucky_box {
+  padding:2.5rem 2rem 2rem;
+  overflow:hidden;
+}
+.lucky_inner {
+  padding-left: 4.5rem;
+}
+.lucky_snow {
+  font-size: 1.0rem;
+  color: #fff;
+  padding: 0.25rem 0;
+}
+.lucky_input {
+  width: 100%;
+  height: 2em;
+  background: #fff;
+  border-radius: 5px;
+  padding: 2px 5px;
+  opacity: 0.4;
+  margin-bottom: 0.5em;
+}
+.lucky_area {
+  width: 100%;
+  height: 8.5em;
+  background: #fff;
+  border-radius: 5px;
+  padding: 2px 5px;
+  opacity: 0.4;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+canvas{
+  position:unset;
+}
+.sidemenu {
+  position: fixed;
+  right: 0.25rem;
+  bottom: 3.5rem;
+}
+.side_nav {
+  width: 2.75rem;
+  height: 2.75rem;
+  box-sizing:border-box;
+  border-radius: 50%;
+  padding-top: 1.45rem;
+  text-align: center;
+  font-size: 0.725rem;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+.idea {
+  background:url(https://www.luckymp.com/Public/Home/images/idea.png) #684932 no-repeat center 3.5px;
+  background-size: 1.65em;
+}
+.my {
+  background:url(https://www.luckymp.com/Public/Home/images/my.png) #684932 no-repeat center 3.5px;
+  background-size: 1.65em;
+}
+.side_list {
+  position:absolute;
+  right:3.55rem;
+  top:0.25rem;
+  width:4.5rem;
+}
+.side_list span {
+  width:100%;
+  height:2.2em;
+  border-radius:5px;
+  padding:2px 5px;
+  font-size: 0.875rem;
+  color: #684932;
+}
+.pstr {
+  position: relative;
+}

@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="lucky-item">
+    <view class="lucky-img">
+      <image src="{{userinfo.head_img}}" mode="scaleToFill" ></image>
+    </view>
+    <view class="lucky-article">
+      <view class="lucky-title">
+        <span class="mylucky-title">{{userinfo.nickname}}</span>
+        <span wx:if="{{userinfo.sex==1}}" class="mylucky-sex"><image src="../../images/1.png" class="mylucky-sex" mode="scaleToFill" ></image></span>
+        <span wx:elif="{{userinfo.sex==2}}" class="mylucky-sex"><image src="../../images/2.png" class="mylucky-sex" mode="scaleToFill" ></image></span>
+        <span wx:else="{{userinfo.sex==0}}" class="mylucky-sex"><image src="../../images/0.png" class="mylucky-sex" mode="scaleToFill" ></image></span>
+      </view>
+    </view>
+  </view>
+
+  <view class="record-list">
+    <template name="financeList">
+      <view class="record-item" id="{{id}}">
+        <view class="record-row">
+          <span class="record-time">{{createtime}}</span>
+          提现
+          <span class="states" wx:if="{{is_pay == 0}}">（未审核）</span>
+          <span class="states" wx:if="{{is_pay == 1}}">（审核通过）</span>
+          <span class="states" wx:if="{{is_pay == 2}}">（审核未通过）</span>
+        </view>
+        <view class="record-row">
+          <span class="record-money">-{{re_money}}</span>
+          <span class="balance">{{balance}}</span>
+        </view>
+      </view>
+    </template>
+
+    <block wx:for="{{finance_list}}" wx:key="finance">
+        <template is="financeList" data="{{...item}}"/>
+    </block>
+  </view>
+
+  <view class="btn-box">
+    <view class="btn-bar" bindtap="mylucky">我的名片</view>
+    <view class="btn-bar" bindtap="docash">我要提现</view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<view class='container' bindtap='closeMenu'>
+  <form bindsubmit="formSubmit">
+    <view class='lucky_title'>猎手评测</view>
+    <view class='lucky_box'>
+      <view class='lucky_head'><image src='{{headImg}}'></image></view>
+      <view class='lucky_inner'>
+        <view class='lucky_snow'>你做什么最专业</view>
+        <input class='lucky_input' name="mymajor" value="{{mymajor}}"></input>
+        <view class='lucky_snow'>专业心得</view>
+        <textarea class="lucky_area" name="mytaste" value="{{mytaste}}"></textarea>
+      </view>
+    </view>
+
+    <button class='lucky_save' form-type="submit">保存成我的专属图片</button>
+  </form>
+</view>
+
+<view class='sidemenu'>
+    <view class='side_nav idea' bindtap='home'>绝招</view>
+    <view class='side_nav my' bindtap='mylucky'>我的</view>
+</view>

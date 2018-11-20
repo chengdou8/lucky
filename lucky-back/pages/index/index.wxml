@@ -1,0 +1,68 @@
+<view class='container'>
+  <view class="topImg">
+    <image src="../../images/khxban01.jpg" mode="scaleToFill" ></image>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="field">
+      <view class="field-tips">天生我才必有用，共享你的绝招，技能，方便他人向你请教...</view>
+      <view class="field-area"><textarea class="comments" hidden="{{hidearea}}" placeholder="请用简短的关键词输入你的职业头衔，优势资源，擅长领域，技能特长等" name="mylable" value="{{mylable}}" fixed='{{fixed}}'></textarea></view>
+    </view>
+
+    <view class="field mt10">
+      <view class='field-top'>
+        <span class="r-tips">
+          <image src="../../images/qb21.png"></image>
+          示例
+        </span>
+        他们的技能
+      </view>
+      <view class="tags">
+        <span class="tag color-1">自媒体大咖　95分</span>
+        <span class="tag color-2">认证理财师　65分</span>
+        <span class="tag color-3">专职律师　73分</span>
+        <span class="tag color-4">人际交往高手　86分</span>
+        <span class="tag color-5">内科教授　98分</span>
+        <span class="tag color-6">家庭情感专家　79分</span>
+        <span class="tag color-2">选车专业顾问　68分</span>
+        <span class="tag color-1">就职规划师　92分</span>
+        <span class="tag color-4">美容师　80分</span>
+        <span class="tag color-5">高考填报志愿专家　85分</span>
+        <span class="tag color-3">瑜伽教练　92分</span>
+        <span class="tag color-6">恒大房产销售　80分</span>
+      </view>
+    </view>
+
+    <view class="field mt10">
+      <view class='field-top'>
+        <span class="field-txt">绝招分数是基于朋友圈的加密评分，致力于绝招实力考量。</span>
+        <span class="r-tips" bindtap="scoring">
+            <image src="../../images/qb22.png"></image>
+            评分与赚钱
+        </span>
+      </view>
+      <view class="btn-group">
+        <button formType="submit" class="btn btn-yellow">提交绝招</button>
+      </view>
+    </view>
+  </form>
+
+  <view class="modal-box" hidden="{{flag}}">
+    <view class="modal-body">
+      <view class="modal-header"><span class="close" bindtap="hideModal">×</span>如何赚钱</view>
+      <view class="modal-content">
+        <view class="making">
+          <view>1、填写你的绝招技能，发表你的绝招观点，让更多的人看到你的绝招观点，当他有这方面的疑问向你取经(提问)，需要支付一定的费用。你的绝招级别越高得到的拥金也会越多，级别等级靠打分升级，你可以邀请朋友给你打分（打分有三种方式：绝招打分、观点打分、答案打分）。</view>
+          <view>绝招级别	咨询费用</view>
+          <view>益友级（60-69）	3元</view>
+          <view>良师级（70-79）	6元</view>
+          <view>导师级（80-89）	50元</view>
+          <view>权威级（90-100）	100元</view>
+          <view>2、你可以抢答别人的悬赏问题。别人确定后你可以获得佣金（详细看悬赏细则）。</view>
+          <view class="btn-group">
+            <button class="btn btn-yellow" bindtap="hideModal">我已阅读</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

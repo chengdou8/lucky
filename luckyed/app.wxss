@@ -1,0 +1,254 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.mt5 {
+  margin-top: 5px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.gray {
+  color: #b9b9b9;
+}
+.orange {
+  color: #fea758;
+}
+.field {
+  width:100%; 
+  padding:10px; 
+  box-sizing:border-box; 
+  background:#FFF;
+}
+.r-tips {
+  float: right;
+}
+.btn-group {
+  padding: 10px 0;
+  text-align: center;
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: none;
+  white-space: nowrap;
+  font-size: .725rem;
+  padding: 0 35px;
+  -wbkit-border-radius: 6px;
+  border-radius: 6px;
+}
+.btn-yellow {
+  color: #fff;
+  background-color: #fea758;
+}
+.btn-yellow:hover {
+  background-color: #ff9966;
+}
+.tags {
+  overflow: auto;
+}
+.tag {
+  display:inline-block; 
+  margin:1% 1% 1% 0; 
+  border:1pt solid #959595; 
+  color:#959595; 
+  -moz-border-radius:8px; 
+  -webkit-border-radius:8px; 
+  border-radius:8px; 
+  padding:2px 5px 0;
+  font-size: .625rem;
+  line-height: 1.5;
+}
+.color-1 {
+  border:1px solid #959595;
+}
+.color-2 { 
+  border:1pt solid #4fdb47; 
+  color:#4fdb47;
+}
+.color-3 { 
+  border:1pt solid #5980ff; 
+  color:#5980ff;
+}
+.color-4 { 
+  border:1pt solid #985ae3; 
+  color:#985ae3;
+}
+.color-5 { 
+  border:1pt solid #ffcc33; 
+  color:#ffcc33;
+}
+.color-6 { 
+  border:1pt solid #f67d4e; 
+  color:#f67d4e;
+}
+
+page{
+    background-color: #F8F8F8;
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+.page__hd {
+    padding: 40px;
+}
+.page__bd {
+    padding-bottom: 40px;
+}
+.page__bd_spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page__ft{
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: left;
+    font-size: 14px;
+}
+
+.lucky-item {
+  background-color:#fff;
+  padding:15px;
+  overflow:hidden;
+  border-bottom: 1px solid #efefef;
+  position: relative;
+}
+.lucky-img {
+  float:left;
+  width:60px;
+  height:60px;
+  line-height:60px;
+  text-align:center;
+  background-color:#eee;
+  border-radius:50%;
+  -webkit-box-shadow:0 3px 3px #bbb;
+  box-shadow:0 3px 3px #bbb;
+}
+.lucky-img image {
+  width:100%;
+  height:100%;
+  vertical-align:top;
+  border-radius:50%;
+}
+.lucky-article {
+  margin-left: 75px;
+  min-height: 65px;
+}
+.article-title {
+  font-size: .875rem;
+}
+.bottom-fixed {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  overflow: hidden;
+}
+.bottom-fixed .btn {
+  float: right;
+  width: 25%;
+  padding: 0;
+  line-height: 45px;
+  border:0 none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: .875rem;
+}
+
+.modal-box{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  z-index: 999;
+  background:rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+.modal-body{
+  position:relative;
+  width: 80%;
+  background:#fff;
+  margin: 10% auto;
+  border-radius: 10rpx;
+}
+.modal-header {
+  padding: 10px 15px;
+  border-bottom: 1px solid #efefef;
+}
+.modal-header .close {
+  float:right;
+  font-size:1.3rem;
+  color:#fea758;
+  font-weight:normal;
+  font-family:Tahoma;
+  line-height:1;
+}
+.modal-content{
+  padding: 10px 15px;
+  font-size: .725rem;
+  color: #666;
+}
+.modal-content .btn-group {
+  padding-top: 20px;
+}
+.topTips {
+  padding: 5px 10px;
+  background-color: #fea758;
+  color: #fff;
+  font-size: .7rem;
+}
+.modal-panel {
+  position: relative;
+  text-align: center;
+  padding-top: 25%;
+}
+.modal-panel image {
+  width: 200px;
+  height: 200px;
+}
+.modal-panel .close {
+  position: absolute;
+  font-size:.75rem;
+  color:#fff;
+  font-weight:normal;
+  font-family:Tahoma;
+  line-height:1;
+  right: 20px;
+  top: 10px;
+}
+.modal-panel .txt {
+  color: #fff;
+  padding: 5px 0;
+}

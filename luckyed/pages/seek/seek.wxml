@@ -1,0 +1,96 @@
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">寻师问道</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav" name="reward">悬赏问道</view>   
+</view>  
+<view class="seekImg">
+  <image src="../../images/20171211094537.jpg" mode="scaleToFill" ></image>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height: {{clientHeight?clientHeight+'px':'auto'}}" bindchange="bindChange">  
+    <swiper-item class="slide-swiper">
+      <scroll-view scroll-top="{{scrollTop}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}" scroll-y="true" bindscrolltoupper="refreshAsk"  bindscroll="scroll" bindscrolltolower="loadMoreAsk">
+       <view class="sk-three-bounce mb10" hidden="{{hideAskHeader}}">
+          <view class="sk-child sk-bounce1"></view>
+          <view class="sk-child sk-bounce2"></view>
+          <view class="sk-child sk-bounce3"></view>
+          <span class="sky-text">疯狂加载中...</span>
+        </view>
+        
+        <view class="seek-list mb10" wx:for="{{aske_list}}" wx:key="aske" wx:for-item="myAsk" bindtap="viewpoint" id="{{myAsk.card_id}}" data-id="{{myAsk.openid}}">
+          <view class="seek-item">
+            <view class="seek-img" catchtap="otherlucky" id="{{myAsk.member_id}}" data-id="{{myAsk.openid}}" data-name="{{myAsk.nickname}}">
+              <image src="{{myAsk.head_img}}" mode="scaleToFill" ></image>
+            </view>
+            <view class="seek-article seek-row">
+              <view class="article-title">{{myAsk.nickname}}</view>
+              <view class="tags">
+                <span class="tag color-5" wx:if="{{myAsk.score >= 90}}">{{myAsk.card_name}} {{myAsk.score}}分</span>
+                <span class="tag color-2" wx:elif="{{myAsk.score >= 80}}">{{myAsk.card_name}} {{myAsk.score}}分</span>
+                <span class="tag color-3" wx:elif="{{myAsk.score >= 70}}">{{myAsk.card_name}} {{myAsk.score}}分</span>
+                <span class="tag color-6" wx:elif="{{myAsk.score >= 60}}">{{myAsk.card_name}} {{myAsk.score}}分</span>
+                <span class="tag color-4" wx:else>{{myAsk.card_name}} {{myAsk.score}}分</span>
+              </view>
+            </view>
+            <view class="seekCon">{{myAsk.content}}</view>
+            <view class="imgList" wx:if="{{myAsk.item_img != null && myAsk.item_img != '' && myAsk.item_img != undefined}}">
+              <view class="imgItem" wx:for="{{myAsk.item_img}}" wx:key="myImg" wx:for-index="myImgindex">
+                <image src="http://www.luckymp.com{{myAsk.item_img[myImgindex]}}" mode="aspectFill"></image>
+              </view>
+            </view>
+            <view class="seek-row">
+              <span class="seek-time">{{myAsk.createtime}}</span>
+            </view>
+          </view>
+        </view> 
+
+        <view class="sk-three-bounce bottom" hidden="{{hideAskBottom}}">
+          <view class="sk-child sk-bounce1"></view>
+          <view class="sk-child sk-bounce2"></view>
+          <view class="sk-child sk-bounce3"></view>
+          <span class="sky-text">加载更多</span>
+        </view>
+        <view class="sk-three-bounce bottom" hidden="{{hideAskBottomMore}}">
+            <span class="sky-text">没有更多数据了</span>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item class="slide-swiper">
+      <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{clientHeight?clientHeight+'px':'auto'}}" 
+        class="list" bindscrolltolower="loadMoreReward" bindscroll="scroll" bindscrolltoupper="refreshReward">
+        <view class="sk-three-bounce mb10" hidden="{{hideRewardHeader}}">
+          <view class="sk-child sk-bounce1"></view>
+          <view class="sk-child sk-bounce2"></view>
+          <view class="sk-child sk-bounce3"></view>
+          <span class="sky-text">疯狂加载中...</span>
+        </view>
+        <template name="rewardList"> 
+          <view class="seek-list mb10">
+            <view class="seek-row">
+              <span class="seek-amount">¥{{money}}</span><span class="seek-title">悬赏问道</span><span class="tag color-{{idx}}">{{title}}</span>
+            </view>
+            <view class="seek-content">
+                {{description}}
+            </view>
+            <view class="seek-row">
+              <view class="btn btn-yellow" id="{{id}}" bindtap="toAnswer">抢答</view>
+              <span class="seek-time">{{createtime}}</span>
+            </view>
+          </view>
+        </template>
+
+        <block wx:for="{{reward_list}}" wx:key="reward">
+            <template is="rewardList" data="{{...item}}"/>
+        </block>
+
+        <view class="sk-three-bounce" hidden="{{hideRewardBottom}}">
+          <view class="sk-child sk-bounce1"></view>
+          <view class="sk-child sk-bounce2"></view>
+          <view class="sk-child sk-bounce3"></view>
+          <span class="sky-text">加载更多</span>
+        </view>
+        <view class="sk-three-bounce" hidden="{{hideRewardBottomMore}}">
+            <span class="sky-text">没有更多数据了</span>
+        </view>
+      </scroll-view>
+    </swiper-item>
+</swiper>

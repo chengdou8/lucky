@@ -1,0 +1,75 @@
+<view class="container">
+  <view class="topTips" bindtap="topTips">
+    我也要发表观点，点击关注，赚取收益。
+  </view>
+  <view class="lucky-item">
+    <view class="lucky-img">
+      <image src="{{head_img}}" mode="scaleToFill" ></image>
+    </view>
+
+    <view class="lucky-article">
+      <view bindtap="finder" class="btn btn-yellow">发<span>●</span>现</view>
+      <span class="mylucky-title">{{nickname}}</span>
+      <span wx:if="{{sex==1}}" class="mylucky-sex"><image src="../../images/1.png" mode="scaleToFill" ></image></span>
+      <span wx:elif="{{sex==2}}" class="mylucky-sex"><image src="../../images/2.png" mode="scaleToFill" ></image></span>
+      <span wx:else="{{sex==0}}" class="mylucky-sex"><image src="../../images/0.png" mode="scaleToFill" ></image></span>
+    </view>
+  </view>
+
+  <view class="mylucky-dl">
+      <view class="mylucky-dt">
+        <view class="edit" bindtap="onChange" hidden="{{edit}}"><image src="../../images/del.png" mode="scaleToFill" ></image>编辑</view>
+        <view class="edit" bindtap="onFinish" hidden="{{finished}}"><image src="../../images/finished.png" mode="scaleToFill" ></image>完成</view> 
+        <image src="../../images/20171212151041.png" mode="scaleToFill" ></image>技能荣誉徽章
+      </view>
+      <view class="mylucky-dd">专家级：达到一定级别的高深交流<span class="tag" wx:if="{{badgelistzj == null}}">90-100</span>
+        <view class="tags" wx:if="{{badgelistzj !=null}}">
+          <view wx:for="{{badgelistzj}}" wx:key="badgelistzj" wx:for-item="listzj" class="tag color-5" id="{{listzj.id}}" data-color="color-5" bindtap="viewpoint">{{listzj.card_name}} {{listzj.score}}分<span class="{{showView?'show':'hide'}}" data-deleteid="{{list.id}}" catchtap="deltag">—</span>
+          </view>
+        </view>
+      </view>
+      <view class="mylucky-dd">教授级：画龙点睛的沟通<span class="tag" wx:if="{{badgelistjs == null}}">80-89</span>
+        <view class="tags" wx:if="{{badgelistjs != null}}">
+          <view wx:for="{{badgelistjs}}" wx:key="badgelistjs" wx:for-item="listjs" class="tag color-2" id="{{listjs.id}}" data-color="color-2" bindtap="viewpoint">{{listjs.card_name}} {{listjs.score}}分<span class="{{showView?'show':'hide'}}" data-deleteid="{{list.id}}" catchtap="deltag">—</span>
+          </view>
+        </view>
+      </view>
+      <view class="mylucky-dd">老师级：提纲挈领的知识<span class="tag" wx:if="{{badgelistjss == null}}">70-79</span>
+        <view class="tags" wx:if="{{badgelistjss != null}}">
+          <view wx:for="{{badgelistjss}}" wx:key="badgelistjss" wx:for-item="listjss" class="tag color-3" id="{{listjss.id}}" data-color="color-3" bindtap="viewpoint">{{listjss.card_name}} {{listjss.score}}分<span class="{{showView?'show':'hide'}}" data-deleteid="{{list.id}}" catchtap="deltag">—</span>
+          </view>
+        </view>
+      </view>
+      <view class="mylucky-dd">同学级：感同身受的交流会<span class="tag" wx:if="{{badgelisttx == null}}">60-69</span>
+        <view class="tags" wx:if="{{badgelisttx != null}}">
+          <view wx:for="{{badgelisttx}}" wx:key="badgelisttx" wx:for-item="listtx" class="tag color-6" id="{{listtx.id}}" data-color="color-6" bindtap="viewpoint">{{listtx.card_name}} {{listtx.score}}分<span class="{{showView?'show':'hide'}}" data-deleteid="{{list.id}}" catchtap="deltag">—</span>
+          </view>
+        </view>
+      </view>
+      <view class="mylucky-dd">进修级<span class="tag" wx:if="{{badgelist == null}}">50-59</span>
+        <view class="tags" wx:if="{{badgelist != null}}">
+          <view wx:for="{{badgelist}}" wx:key="badgelist" wx:for-item="list" class="tag color-4" id="{{list.id}}" data-color="color-4" bindtap="viewpoint">{{list.card_name}} {{list.score}}分<span class="{{showView?'show':'hide'}}" data-deleteid="{{list.id}}" catchtap="deltag">—</span></view>
+        </view>
+      </view>
+  </view>
+
+  <view class="mylucy-con">您已累计回答{{qanswercount}}个问题，共赚取<span class="orange">{{moenycount}}</span>元</view>
+  <view class="mylucky-group">
+    <view class="btn btn-yellow" bindtap="askme">有人问我</view>
+    <view class="btn btn-yellow" bindtap="cash">提现</view>
+    <view class="btn btn-yellow" bindtap="share">晒晒绝招</view>
+  </view>
+
+
+  <view class="modal-box" hidden="{{flag}}">
+    <view class="modal-panel">
+      <span class="close" bindtap="hideModal">关闭 ×</span>
+      <image src="../../images/20180110164438.jpg" mode="scaleToFill" ></image>
+      <view class='txt'>扫一扫或长按识别</view>
+    </view>
+  </view>
+
+  <view class="share" bindtap="closeshare" hidden="{{share}}">     
+      <image src="../../images/share.png"></image>
+  </view>
+</view>

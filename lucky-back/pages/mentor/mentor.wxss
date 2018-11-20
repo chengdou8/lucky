@@ -1,0 +1,85 @@
+.search-form {
+  background: url(http://www.luckymp.com//Public/Home/images/khxban03.jpg) no-repeat;
+  background-size: 100% auto;
+  height: 135px;
+}
+.search-box {
+  width: 100%;
+  position: relative;
+}
+.search-box image {
+  position: absolute;
+  left: 20px;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+}
+.search-input {
+  height: 30px;
+  line-height: 30px;
+  font-size: .725rem;
+  padding: 0 10px 0 35px;
+  background-color: #fff;
+  border:1px solid #fea758;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  margin: 10px;
+}
+.search-claer {
+  background:none;
+  position:absolute;
+  border:0 none;
+  right:0;
+  top:0;
+  padding: 0;
+  overflow: inherit;
+}
+.clear-icon {
+  position:absolute;
+  right:38rpx;
+  top:18rpx;
+  z-index:3;
+}
+.btn-group.bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+}
+.btn-group.bottom .btn {
+  display: block;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: .875rem;
+  line-height: 38px;
+}
+.weui-cells,.weui-panel {
+  margin-top: 0;
+}
+.weui-cells .weui-panel:first-child::before,.weui-cells:after,.weui-panel:after {
+  border: 0 none;
+}
+.weui-media-box {
+  padding: 10px 15px;
+}
+.weui-media-box__thumb {
+  border-radius: 50%;
+}
+.weui-cells .btn {
+  padding: 0 10px;
+}
+.weui-media-box__title {
+  margin-bottom: 5px;
+}
+.weui-media-box__bd_in-appmsg .weui-media-box__desc {
+  display: block;
+}
+.searchbar-result .weui-panel:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+.searchbar-result .weui-panel:first-child {
+  border-top: 1px solid #e5e5e5;
+}
